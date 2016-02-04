@@ -1,15 +1,15 @@
 class Phone
-
-  attr_accessor :number_of_rings
-
-  def initialize(r, num)
-    @ringtone = r
-    @number_of_rings = num
+  def initialize(phone_make, phone_model, ringtones = ["Bring, bring, bring..."])
+    @make = phone_make
+    @model = phone_model
+    @ringtones = ringtones
   end
 
   def ring
-    @number_of_rings.times do
-      puts @ringtone
-    end
+    puts @ringtones
+  end
+
+  def get_model
+    return "#{@make} #{@model}"
   end
 end
